@@ -4,23 +4,43 @@ import com.itowaka044.todo_list_rpg.entities.enums.QuestAttributes;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Entity
 @DiscriminatorValue("daily")
 public class DailyQuest extends Quest{
 
-    public boolean refreshQuest;
+    public boolean refresh;
+    public LocalDateTime lastComplete = LocalDateTime.of(2020,1,1,1,1,1);
 
-    public DailyQuest(boolean refreshQuest) {
-        this.refreshQuest = refreshQuest;
+    public DailyQuest() {
+        this.refresh = true;
     }
 
-    public DailyQuest(Long questId, String questName, String questDesc, int xpGained, int questValue, QuestAttributes questType) {
-        super(questId, questName, questDesc, xpGained, questValue, questType);
-        this.refreshQuest = true;
+    public DailyQuest(String questName, String questDesc, int xpGained, int questValue, QuestAttributes questType) {
+        super(questName, questDesc, xpGained, questValue, questType);
+        this.refresh = true;
     }
 
-    public void restartQuest(){
-        questStatus = false;
+    public boolean canRefresh(LocalDateTime lastComplete) {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDate lastCompleteDateOnly = lastComplete.toLocalDate();
+        LocalDate actualDate = now.toLocalDate();
+
+        return !lastCompleteDateOnly.equals(actualDate) || lastComplete == null;
+    }
+
+    @Override
+    public void questReward(Player player){
+        if (canRefresh(lastComplete)){
+            refresh = true;
+        }
+        if (refresh){
+            super.questReward(player);
+            refresh = false;
+            lastComplete = LocalDateTime.now();
+        }
     }
 
     @Override
@@ -28,16 +48,16 @@ public class DailyQuest extends Quest{
 
         String status;
 
-        if(!refreshQuest) {
-            status = "sim";
-        }else{
+        if(refresh) {
             status = "nao";
+        }else{
+            status = "sim";
         }
 
         return "\nnome da quest: " + questName
                 + "\ndescricao: " + questDesc
                 + "\nstatus da quest: " + questStatus
                 + "\nxp da quest: " + xpGained + " xp"
-                + "\nja foi feita: " + status;
+                + "\nfoi feita: " + status;
     }
 }

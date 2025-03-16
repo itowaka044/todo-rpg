@@ -16,6 +16,12 @@ public class Player{
 
     public Short strength=0, intelligence=0, constitution=0, charisma=0;
 
+    public Player(String playerName) {
+        this.playerName = playerName;
+        this.playerLvl = 1;
+        this.playerXp = 1;
+    }
+
     public String getPlayerName() {
         return playerName;
     }
@@ -44,18 +50,12 @@ public class Player{
         return strength;
     }
 
-    public Player(String playerName) {
-        this.playerName = playerName;
-        this.playerLvl = 1;
-        this.playerXp = 1;
-    }
-
     public int xpGap(short level){
         int xpGap;
-        if(playerLvl > 100){
-            xpGap = 115 * playerLvl;
-        } else {
+        if(playerLvl < 100){
             xpGap = 120 * playerLvl;
+        } else {
+            xpGap = 115 * playerLvl;
         }
         return xpGap;
     }
@@ -74,6 +74,11 @@ public class Player{
 
             System.out.println("\nupou de lvl");
         }
+    }
+
+    public void lvlUp(Integer xpGained){
+        playerXp = playerXp - xpGap(playerLvl);
+        playerLvl++;
     }
 
     public void changePlayerName(String actualName){

@@ -24,23 +24,13 @@ public class Quest{
     public Quest() {
     }
 
-    public Quest(Long questId, String questName, String questDesc, Integer xpGained, Integer questValue, QuestAttributes questType) {
-        this.questId = questId;
+    public Quest(String questName, String questDesc, Integer xpGained, Integer questValue, QuestAttributes questType) {
         this.questName = questName;
         this.questDesc = questDesc;
         this.xpGained = xpGained;
         this.questValue = questValue;
         this.questAttributes = questType;
-
         questStatus = true;
-    }
-
-    public Quest(Long questId, String questName, String questDesc, Integer xpGained, Integer questValue) {
-        this.questId = questId;
-        this.questName = questName;
-        this.questDesc = questDesc;
-        this.xpGained = xpGained;
-        this.questValue = questValue;
     }
 
     public Long getQuestId() {
@@ -72,40 +62,36 @@ public class Quest{
     }
 
     public void questReward(Player player){
-        if (!questStatus) {
-            System.out.println("\nquest completa");
-            player.playerXp += xpGained;
+        questStatus = false;
+        System.out.println("\nquest completa");
+        player.gainXp(this.xpGained);
 
-            switch(questAttributes){
+        switch(questAttributes){
 
-                case QuestAttributes.STRENGTH -> {
-                    System.out.println("+1 strength");
-                    player.upStrength();
-                }
-
-                case QuestAttributes.INTELLIGENCE -> {
-                    System.out.println("+1 intelligence");
-                    player.upIntelligence();
-                }
-
-                case QuestAttributes.CHARISMA -> {
-                    System.out.println("+1 charisma");
-                    player.upCharisma();
-                }
-
-                case QuestAttributes.CONSTITUTION -> {
-                    System.out.println("+1 constitution");
-                    player.upConstitution();
-                }
-
+            case QuestAttributes.STRENGTH -> {
+                System.out.println("+1 strength");
+                player.upStrength();
             }
 
-            if (player.isNextLvl()){
-                player.gainXp(xpGained);
-                questStatus = true;
+            case QuestAttributes.INTELLIGENCE -> {
+                System.out.println("+1 intelligence");
+                player.upIntelligence();
             }
-        } else {
-            System.out.println("\nquest ja foi feita");
+
+            case QuestAttributes.CHARISMA -> {
+                System.out.println("+1 charisma");
+                player.upCharisma();
+            }
+
+            case QuestAttributes.CONSTITUTION -> {
+                System.out.println("+1 constitution");
+                player.upConstitution();
+            }
+
+        }
+
+        if (player.isNextLvl()){
+            player.lvlUp(xpGained);
         }
     }
 
