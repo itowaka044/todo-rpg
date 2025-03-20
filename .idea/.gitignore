@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # build e cache  
 /target/  
 /bin/  
@@ -33,3 +34,8 @@ application-*.yml
 application-*.properties  
 secrets.json  
 *.pem  
+=======
+# Default ignored files
+/shelf/
+/workspace.xml
+>>>>>>> 62d7241 (XD)

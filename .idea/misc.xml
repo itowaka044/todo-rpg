@@ -5,10 +5,18 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/todo-list-rpg/pom.xml" />
+<<<<<<< HEAD
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="21" project-jdk-type="JavaSDK">
+=======
+        <option value="$PROJECT_DIR$/todo-rpg/todo-list-rpg/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
+>>>>>>> 62d7241 (XD)
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
