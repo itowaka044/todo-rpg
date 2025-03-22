@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main>
+        <div class="main-page">
+            <div class="create-quest">
+                <h2>Create a Quest:</h2>
+                <form method="POST">
+                    <label for="questName">Nome da Missão:</label>
+                    <input type="text" id="questName" name="questName" required>
+            
+                    <label for="questDesc">Descrição:</label>
+                    <textarea id="questDesc" name="questDesc" rows="4" required></textarea>
+            
+                    <label for="questValue">Valor da Missão:</label>
+                    <input type="number" id="questValue" name="questValue" min="1" max="4" required>
+            
+                    <label for="questAttributes">Atributos da Missão:</label>
+                    <select id="questAttributes" name="questAttributes" required>
+                        <option value="">Selecione um atributo</option>
+                        <option value="força">Força</option>
+                        <option value="agilidade">Vitalidade</option>
+                        <option value="inteligencia">Inteligência</option>
+                        <option value="inteligencia">Carisma</option>
+                        
+                    </select>
+            
+                    <label for="questType">Tipo da Missão:</label>
+                    <select id="questType" name="questType" required>
+                        <option value="">Selecione um tipo</option>
+                        <option value="principal">Main Quest</option>
+                        <option value="secundaria">Daily Quest</option>
+                    </select>
+            
+                    <button class="quest-btn" type="submit">Cadastrar Missão</button>
+                </form>
+            </div>
+
+            <div class="quest-list">
+                <h2>Quest List</h2>
+                <div id="questList"></div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

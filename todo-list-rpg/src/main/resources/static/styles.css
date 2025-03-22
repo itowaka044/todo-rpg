@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 80vh;
+    width: 80vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-content{
+    background-color: white;
+    height: 40vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px
+}
+
+#player-name{
+    height: 5vh;
+    width: 15vw;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#player-name-btn{
+    height: 5vh;
+    width: 10vw;
+    color: white;
+    border: 2px solid black;
+    background-color: black;
+}
+
+@media (max-width: 800px) {
+    #player-name{
+        width: 30vw;
+    }
+
+    #player-name-btn{
+        width: 20vw;
+    }
+}
+
+.main-page{
+    height: 90vh;
+    width: 90vw;
+    background-color: white;
+    display: flex;
+    gap: 5px;
+}
+
+.create-quest{
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    color: white;
+}
+
+.quest-list{
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh;
+}
+
+label {
+    font-weight: bold;
+    
+}
+input, textarea, select {
+    width: 90%;
+    margin: 5px 0 15px;
+    padding: 8px;
+}
+
+.quest-btn{
+    height: 8vh;
+    width: 15vw;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    font-size:medium;
+}
+
+.quest-list{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+
+#questList {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 50%;
+    background-color: #f9f9f9;
+}
+.quest-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.quest-item:last-child {
+    border-bottom: none;
+}
