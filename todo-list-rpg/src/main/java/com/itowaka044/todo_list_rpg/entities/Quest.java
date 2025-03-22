@@ -11,7 +11,7 @@ public class Quest{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long questId;
+    private Long Id;
 
     @Column(nullable = false)
     protected String questName;
@@ -44,12 +44,12 @@ public class Quest{
         this.questType = questType;
     }
 
-    public Long getQuestId() {
-        return questId;
+    public Long getId() {
+        return Id;
     }
 
-    public void setQuestId(Long questId) {
-        this.questId = questId;
+    public void setId(Long id) {
+        Id = id;
     }
 
     public String getQuestName() {
@@ -70,6 +70,34 @@ public class Quest{
 
     public Integer getXpGained() {
         return xpGained;
+    }
+
+    public void setXpGained(Integer xpGained) {
+        this.xpGained = xpGained;
+    }
+
+    public Boolean getQuestStatus() {
+        return questStatus;
+    }
+
+    public void setQuestStatus(Boolean questStatus) {
+        this.questStatus = questStatus;
+    }
+
+    public Integer getQuestValue() {
+        return questValue;
+    }
+
+    public void setQuestValue(Integer questValue) {
+        this.questValue = questValue;
+    }
+
+    public QuestTypeAttributes getQuestType() {
+        return questType;
+    }
+
+    public void setQuestType(QuestTypeAttributes questType) {
+        this.questType = questType;
     }
 
     public void questReward(Player player){

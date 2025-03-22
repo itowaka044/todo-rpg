@@ -23,6 +23,22 @@ public class DailyQuest extends Quest{
         this.refresh = true;
     }
 
+    public Boolean getRefresh() {
+        return refresh;
+    }
+
+    public void setRefresh(Boolean refresh) {
+        this.refresh = refresh;
+    }
+
+    public LocalDateTime getLastComplete() {
+        return lastComplete;
+    }
+
+    public void setLastComplete(LocalDateTime lastComplete) {
+        this.lastComplete = lastComplete;
+    }
+
     public boolean canRefresh(LocalDateTime lastComplete) {
         LocalDateTime now = LocalDateTime.now();
         LocalDate lastCompleteDateOnly = lastComplete.toLocalDate();

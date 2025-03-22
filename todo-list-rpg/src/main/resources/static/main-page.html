@@ -12,7 +12,7 @@
         <div class="main-page">
             <div class="create-quest">
                 <h2>Create a Quest:</h2>
-                <form method="POST">
+                <form method="POST" action="/quest/create">
                     <label for="questName">Nome da Missão:</label>
                     <input type="text" id="questName" name="questName" required>
             
@@ -22,21 +22,14 @@
                     <label for="questValue">Valor da Missão:</label>
                     <input type="number" id="questValue" name="questValue" min="1" max="4" required>
             
-                    <label for="questAttributes">Atributos da Missão:</label>
-                    <select id="questAttributes" name="questAttributes" required>
-                        <option value="">Selecione um atributo</option>
-                        <option value="força">Força</option>
-                        <option value="agilidade">Vitalidade</option>
-                        <option value="inteligencia">Inteligência</option>
-                        <option value="inteligencia">Carisma</option>
-                        
-                    </select>
-            
-                    <label for="questType">Tipo da Missão:</label>
+                    <label for="questType">Atributos da Missão:</label>
                     <select id="questType" name="questType" required>
-                        <option value="">Selecione um tipo</option>
-                        <option value="principal">Main Quest</option>
-                        <option value="secundaria">Daily Quest</option>
+                        <option value="">Selecione um atributo</option>
+                        <option value="STRENGTH">Força</option>
+                        <option value="CONSTITUTION">Vitalidade</option>
+                        <option value="INTELLIGENCE">Inteligência</option>
+                        <option value="CHARISMA ">Carisma</option>
+                        
                     </select>
             
                     <button class="quest-btn" type="submit">Cadastrar Missão</button>
@@ -45,11 +38,19 @@
 
             <div class="quest-list">
                 <h2>Quest List</h2>
-                <div id="questList"></div>
+                <div id="questList">
+                    <!-- <div class="quest-item">
+                        <h3>Malhar</h3>
+                        <p>Ficar forte</p>
+                        <p><strong>Nivel:</strong> 3</p>
+                        <p><strong>Tipo:</strong> STRENGTH</p>
+                        <p><strong>XP ganho:</strong> 300</p>
+                    </div> -->
+                </div>
             </div>
         </div>
     </main>
     
-    <script src="script.js"></script>
+    <script src="quests.js"></script>
 </body>
 </html>

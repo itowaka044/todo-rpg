@@ -58,7 +58,7 @@ main{
 }
 
 .main-page{
-    height: 90vh;
+    height: 80vh;
     width: 90vw;
     background-color: white;
     display: flex;
@@ -66,13 +66,6 @@ main{
 }
 
 .create-quest{
-    height: 100%;
-    width: 50%;
-    background-color: black;
-    color: white;
-}
-
-.quest-list{
     height: 100%;
     width: 50%;
     background-color: black;
@@ -106,22 +99,48 @@ input, textarea, select {
 }
 
 .quest-list{
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    color: white;
     display: flex;
     flex-direction: column ;
     align-items: center;
 }
 
 #questList {
-    margin-top: 20px;
+    margin-top: 5px;
     border: 1px solid #ccc;
     padding: 10px;
     width: 50%;
     background-color: #f9f9f9;
 }
 .quest-item {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
+    color: black;
+    margin-top: 2px;
 }
-.quest-item:last-child {
-    border-bottom: none;
+
+.quest-item h3{
+    font-size: 1.4rem;
+}
+
+.quest-item p{
+    font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+
+    .main-page{
+        flex-direction: column;
+
+    }
+
+    .quest-list {
+        width: 100%;
+    }
+
+    .create-quest{
+        width: 100%;
+    }
+
 }

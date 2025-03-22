@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b2b3281-aa61-4aaa-a3cf-7661d575a88d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-rpg" beforeDir="false" />
+    <list default="true" id="5b2b3281-aa61-4aaa-a3cf-7661d575a88d" name="Changes" comment="anotações spring corrigidas; exceções em controller e service criados; pasta static com interface dp usuario criados">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/DailyQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/DailyQuest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Quest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/main-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/main-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +115,27 @@
       <option name="presentableId" value="Default" />
       <updated>1742404744710</updated>
     </task>
+    <task id="LOCAL-00001" summary="anotações spring corrigidas; exceções em controller e service criados; pasta static com interface dp usuario criados">
+      <option name="closed" value="true" />
+      <created>1742609008699</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742609008699</updated>
+    </task>
+    <task id="LOCAL-00002" summary="anotações spring corrigidas; exceções em controller e service criados; pasta static com interface dp usuario criados">
+      <option name="closed" value="true" />
+      <created>1742609085937</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742609085937</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="anotações spring corrigidas; exceções em controller e service criados; pasta static com interface dp usuario criados" />
+    <option name="LAST_COMMIT_MESSAGE" value="anotações spring corrigidas; exceções em controller e service criados; pasta static com interface dp usuario criados" />
   </component>
 </project>

@@ -8,7 +8,7 @@ public class Player{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long playerId;
+    private Long Id;
 
     @Column(nullable = false, unique = true)
     private String playerName;
@@ -44,6 +44,14 @@ public class Player{
         if (charisma == null) charisma = 0;
     }
 
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
+
     public String getPlayerName() {
         return playerName;
     }
@@ -52,24 +60,52 @@ public class Player{
         this.playerName = playerName;
     }
 
-    public Short getCharisma() {
-        return charisma;
+    public Integer getPlayerXp() {
+        return playerXp;
     }
 
-    public Short getConstitution() {
-        return constitution;
-    }
-
-    public Short getIntelligence() {
-        return intelligence;
+    public void setPlayerXp(Integer playerXp) {
+        this.playerXp = playerXp;
     }
 
     public Short getPlayerLvl() {
         return playerLvl;
     }
 
+    public void setPlayerLvl(Short playerLvl) {
+        this.playerLvl = playerLvl;
+    }
+
     public Short getStrength() {
         return strength;
+    }
+
+    public void setStrength(Short strength) {
+        this.strength = strength;
+    }
+
+    public Short getIntelligence() {
+        return intelligence;
+    }
+
+    public void setIntelligence(Short intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public Short getConstitution() {
+        return constitution;
+    }
+
+    public void setConstitution(Short constitution) {
+        this.constitution = constitution;
+    }
+
+    public Short getCharisma() {
+        return charisma;
+    }
+
+    public void setCharisma(Short charisma) {
+        this.charisma = charisma;
     }
 
     public int xpGap(short level){
