@@ -19,17 +19,23 @@
                     <label for="questDesc">Descrição:</label>
                     <textarea id="questDesc" name="questDesc" rows="4" required></textarea>
             
-                    <label for="questValue">Valor da Missão:</label>
-                    <input type="number" id="questValue" name="questValue" min="1" max="4" required>
+                    <label for="questDifficult">Dificuldade da Missão:</label>
+                    <input type="number" id="questDifficult" name="questDifficult" min="1" max="4" required>
             
-                    <label for="questType">Atributos da Missão:</label>
-                    <select id="questType" name="questType" required>
+                    <label for="questTypeAttributes">Atributos da Missão:</label>
+                    <select id="questTypeAttributes" name="questTypeAttributes" required>
                         <option value="">Selecione um atributo</option>
                         <option value="STRENGTH">Força</option>
                         <option value="CONSTITUTION">Vitalidade</option>
                         <option value="INTELLIGENCE">Inteligência</option>
                         <option value="CHARISMA ">Carisma</option>
                         
+                    </select>
+
+                    <label for="questType">Tipo da missão:</label>
+                    <select id="questType">
+                        <option value="normal">Missão Normal</option>
+                        <option value="daily">Missão Diária</option>
                     </select>
             
                     <button class="quest-btn" type="submit">Cadastrar Missão</button>

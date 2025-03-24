@@ -2,18 +2,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.create-quest form');
 
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // obrigatorio preencher o forms
+        event.preventDefault();
+
+        // verifica se a missão é diaria
+        const isDaily = document.getElementById('questType').value === 'daily';
 
         const formData = {
             questName: document.getElementById('questName').value,
             questDesc: document.getElementById('questDesc').value,
-            questValue: parseInt(document.getElementById('questValue').value),
+            questDifficult: parseInt(document.getElementById('questDifficult').value),
             questStatus: false,
-            xpGained: (parseInt(document.getElementById('questValue').value) * 100), //xp da quest, depende do quest value
-            questType: document.getElementById('questType').value
+            xpGained: (parseInt(document.getElementById('questDifficult').value)) * 100,
+            questType: document.getElementById('questTypeAttributes').value
         };
 
-        fetch('/quest/create', {
+        if (isDaily) {
+            formData.refresh = true;
+            formData.lastComplete =  new Date();
+        }
+
+        const url = isDaily ? '/quest/create-daily' : '/quest/create';
+
+
+        fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => {
             if (!response.ok) {
-                throw new Error('erro na resposta do servidor ' + response.status);
+                throw new Error('Erro na resposta do servidor ' + response.status);
             }
             return response.json();
         })
