@@ -5,5 +5,4 @@ public enum QuestTypeAttributes {
     INTELLIGENCE,
     CONSTITUTION,
     CHARISMA;
-
 }

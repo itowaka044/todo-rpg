@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b2b3281-aa61-4aaa-a3cf-7661d575a88d" name="Changes" comment="anotações spring corrigidas; exceções em controller e service criados; pasta static com interface dp usuario criados">
+    <list default="true" id="5b2b3281-aa61-4aaa-a3cf-7661d575a88d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/controllers/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/controllers/QuestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/DailyQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/DailyQuest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Quest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/enums/QuestTypeAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/enums/QuestTypeAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/services/QuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/services/QuestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/main-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/main-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/quests.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/quests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/test/java/com/itowaka044/todo_list_rpg/TodoListRpgApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/test/java/com/itowaka044/todo_list_rpg/TodoListRpgApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +32,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -61,7 +67,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/todo-project",
+    "last_opened_file_path": "C:/Users/João Vitor Wakamori/OneDrive/Documents/todo-rpg-master-1",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
@@ -131,11 +137,53 @@
       <option name="project" value="LOCAL" />
       <updated>1742609085937</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="alterações para retornar um json para o servidor ao finalizar o formulario de quest,para poder salva-la no banco">
+      <option name="closed" value="true" />
+      <created>1742613997503</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742613997503</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="anotações spring corrigidas; exceções em controller e service criados; pasta static com interface dp usuario criados" />
-    <option name="LAST_COMMIT_MESSAGE" value="anotações spring corrigidas; exceções em controller e service criados; pasta static com interface dp usuario criados" />
+    <MESSAGE value="alterações para retornar um json para o servidor ao finalizar o formulario de quest,para poder salva-la no banco" />
+    <option name="LAST_COMMIT_MESSAGE" value="alterações para retornar um json para o servidor ao finalizar o formulario de quest,para poder salva-la no banco" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.BeanCreationException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "quest", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorColumn(name = "quest_type", discriminatorType = DiscriminatorType.STRING)
 @Table(name = "quest")
 public class Quest{
 
@@ -13,34 +13,34 @@ public class Quest{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @Column(nullable = false)
+    @Column(name = "name", nullable = false)
     protected String questName;
 
-    @Column(nullable = false)
+    @Column(name = "desc", nullable = false)
     public String questDesc;
 
-    @Column(nullable = false)
+    @Column(name = "xp", nullable = false)
     public Integer xpGained;
 
-    @Column(nullable = false)
+    @Column(name = "status", nullable = false)
     public Boolean questStatus;
 
-    @Column(nullable = false)
-    public Integer questValue;
+    @Column(name = "difficult", nullable = false)
+    public Integer questDifficult;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "type", nullable = false)
     private QuestTypeAttributes questType;
 
 
     public Quest() {
     }
 
-    public Quest(String questName, String questDesc, Integer xpGained, Integer questValue, QuestTypeAttributes questType) {
+    public Quest(String questName, String questDesc, Integer xpGained, Integer questDifficult, QuestTypeAttributes questType) {
         this.questName = questName;
         this.questDesc = questDesc;
         this.xpGained = xpGained;
-        this.questValue = questValue;
+        this.questDifficult = questDifficult;
         this.questType = questType;
     }
 
@@ -84,12 +84,12 @@ public class Quest{
         this.questStatus = questStatus;
     }
 
-    public Integer getQuestValue() {
-        return questValue;
+    public Integer getQuestDifficult() {
+        return questDifficult;
     }
 
-    public void setQuestValue(Integer questValue) {
-        this.questValue = questValue;
+    public void setQuestDifficult(Integer questDifficult) {
+        this.questDifficult = questDifficult;
     }
 
     public QuestTypeAttributes getQuestType() {

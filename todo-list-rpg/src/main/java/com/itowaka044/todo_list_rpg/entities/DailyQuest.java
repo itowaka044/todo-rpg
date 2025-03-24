@@ -1,6 +1,7 @@
 package com.itowaka044.todo_list_rpg.entities;
 
 import com.itowaka044.todo_list_rpg.entities.enums.QuestTypeAttributes;
+import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
@@ -11,7 +12,10 @@ import java.time.LocalDateTime;
 @DiscriminatorValue("daily")
 public class DailyQuest extends Quest{
 
+    @Column(name = "refresh")
     public Boolean refresh;
+
+    @Column(name = "last_complete")
     public LocalDateTime lastComplete = LocalDateTime.of(2020,1,1,1,1,1);
 
     public DailyQuest() {

@@ -10,17 +10,26 @@ public class Player{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "name", nullable = false, unique = true)
     private String playerName;
 
-    @Column(nullable = false)
+    @Column(name = "xp", nullable = false)
     private Integer playerXp;
 
-    @Column(nullable = false)
+    @Column(name = "lvl", nullable = false)
     private Short playerLvl;
 
-    @Column(nullable = false)
-    private Short strength, intelligence, constitution, charisma;
+    @Column(name = "strength", nullable = false)
+    private Short strength;
+
+    @Column(name = "intelligence", nullable = false)
+    private Short intelligence;
+
+    @Column(name = "constitution", nullable = false)
+    private Short constitution;
+
+    @Column(name = "charisma", nullable = false)
+    private Short charisma;
 
     public Player() {}
 
