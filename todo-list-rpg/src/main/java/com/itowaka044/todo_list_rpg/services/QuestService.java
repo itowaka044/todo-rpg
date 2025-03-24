@@ -1,5 +1,6 @@
 package com.itowaka044.todo_list_rpg.services;
 
+import com.itowaka044.todo_list_rpg.entities.DailyQuest;
 import com.itowaka044.todo_list_rpg.entities.Quest;
 import com.itowaka044.todo_list_rpg.repositories.QuestRepository;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,11 @@ public class QuestService {
 
     @Transactional
     public Quest saveQuest(Quest quest) {
+        return questRepository.save(quest);
+    }
+
+    @Transactional
+    public DailyQuest saveDailyQuest(DailyQuest quest){
         return questRepository.save(quest);
     }
 

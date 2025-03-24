@@ -1,5 +1,6 @@
 package com.itowaka044.todo_list_rpg.controllers;
 
+import com.itowaka044.todo_list_rpg.entities.DailyQuest;
 import com.itowaka044.todo_list_rpg.entities.Quest;
 import com.itowaka044.todo_list_rpg.services.QuestService;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,12 @@ public class QuestController {
     @PostMapping("/create")
     public ResponseEntity<Quest> createQuest(@RequestBody Quest quest) {
         Quest createdQuest = questService.saveQuest(quest);
+        return ResponseEntity.status(201).body(createdQuest);
+    }
+
+    @PostMapping("/create-daily")
+    public ResponseEntity<DailyQuest> createDailyQuest(@RequestBody DailyQuest quest) {
+        DailyQuest createdQuest = questService.saveDailyQuest(quest);
         return ResponseEntity.status(201).body(createdQuest);
     }
 
