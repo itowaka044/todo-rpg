@@ -3,6 +3,7 @@ package com.itowaka044.todo_list_rpg.controllers;
 import com.itowaka044.todo_list_rpg.entities.DailyQuest;
 import com.itowaka044.todo_list_rpg.entities.Quest;
 import com.itowaka044.todo_list_rpg.services.QuestService;
+import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,6 +36,14 @@ public class QuestController {
     public ResponseEntity<List<Quest>> listAllQuests() {
         List<Quest> quests = questService.listAllQuests();
         return ResponseEntity.ok(quests);
+    }
+
+    @PatchMapping("/change-name/{id}/{newName}")
+    public ResponseEntity<String> changeQuestName(
+            @PathVariable Long id,
+            @RequestParam String newName){
+        questService.changeQuestName(id, newName);
+        return ResponseEntity.ok("nome atualizado");
     }
 
     @DeleteMapping("/delete/{id}")

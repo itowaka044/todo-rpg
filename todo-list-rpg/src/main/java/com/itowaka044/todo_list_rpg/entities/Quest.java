@@ -116,6 +116,10 @@ public class Quest{
         }
     }
 
+    public void changeQuestName(String name){
+        questName = name;
+    }
+
     public String toString(){
         return "\nnome da quest: " + questName
                 + "\ndescricao: " + questDesc

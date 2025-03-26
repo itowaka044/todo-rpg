@@ -52,9 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function loadAllQuests() {
     fetch('/quest/list-all')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao buscar quests.');
+        }
+        return response.json();
+    })
     .then(data => {
-        const questList = document.getElementById('questList');
+        const questList = document.getElementById('quest-list');
         questList.innerHTML = '';
         // se não existir quest
         if (data.length === 0) {
@@ -66,9 +71,13 @@ function loadAllQuests() {
             const questElement = document.createElement('div');
             questElement.className = 'quest-item';
             questElement.innerHTML = `
-                <h3>${quest.questName}</h3>
+                <div class="quest-name">
+                            <p>ID: ${quest.id}</p>
+                            <h3>${quest.questName}</h3>
+                            <button class="change-name">TROCAR</button>
+                        </div>
                 <p>${quest.questDesc}</p>
-                <p><strong>Nivel:</strong> ${quest.questValue}</p>
+                <p><strong>Nivel:</strong> ${quest.questDifficult}</p>
                 <p><strong>Tipo:</strong> ${quest.questType}</p>
                 <p><strong>XP ganho:</strong> ${quest.xpGained}</p>
             `;
@@ -80,5 +89,6 @@ function loadAllQuests() {
         document.getElementById('questList').innerHTML = '<p>Erro ao encontrar quests.</p>';
     });
 }
+
 loadAllQuests();
 console.log("ok");

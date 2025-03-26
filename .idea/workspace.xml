@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b2b3281-aa61-4aaa-a3cf-7661d575a88d" name="Changes" comment="">
+    <list default="true" id="5b2b3281-aa61-4aaa-a3cf-7661d575a88d" name="Changes" comment="nome das colunas corrigidos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-list-rpg/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/controllers/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/controllers/QuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/DailyQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/DailyQuest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/Quest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/enums/QuestTypeAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/entities/enums/QuestTypeAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/repositories/QuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/repositories/QuestRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/services/QuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/java/com/itowaka044/todo_list_rpg/services/QuestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/main-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/main-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/quests.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/quests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/main/resources/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-list-rpg/src/test/java/com/itowaka044/todo_list_rpg/TodoListRpgApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list-rpg/src/test/java/com/itowaka044/todo_list_rpg/TodoListRpgApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,18 +55,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TodoListRpgApplication (1).executor": "Run",
-    "Application.TodoListRpgApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/João Vitor Wakamori/OneDrive/Documents/todo-rpg-master-1",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TodoListRpgApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.TodoListRpgApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/testes/todo-rpg-master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\todo-rpg-project" />
@@ -145,7 +141,31 @@
       <option name="project" value="LOCAL" />
       <updated>1742613997503</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="função para criar daily quest feita">
+      <option name="closed" value="true" />
+      <created>1742855970295</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742855970295</updated>
+    </task>
+    <task id="LOCAL-00005" summary="função alterada, para poder criar tanto daily quanto normal quest">
+      <option name="closed" value="true" />
+      <created>1742856021297</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742856021297</updated>
+    </task>
+    <task id="LOCAL-00006" summary="nome das colunas corrigidos">
+      <option name="closed" value="true" />
+      <created>1742856107944</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742856107944</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,7 +194,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="anotações spring corrigidas; exceções em controller e service criados; pasta static com interface dp usuario criados" />
     <MESSAGE value="alterações para retornar um json para o servidor ao finalizar o formulario de quest,para poder salva-la no banco" />
-    <option name="LAST_COMMIT_MESSAGE" value="alterações para retornar um json para o servidor ao finalizar o formulario de quest,para poder salva-la no banco" />
+    <MESSAGE value="função para criar daily quest feita" />
+    <MESSAGE value="função alterada, para poder criar tanto daily quanto normal quest" />
+    <MESSAGE value="nome das colunas corrigidos" />
+    <option name="LAST_COMMIT_MESSAGE" value="nome das colunas corrigidos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -182,6 +205,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.springframework.beans.factory.BeanCreationException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.PropertyValueException" package="org.hibernate" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

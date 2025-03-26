@@ -18,14 +18,16 @@ public class QuestService {
         this.questRepository = questRepository;
     }
 
-    @Transactional
     public Quest saveQuest(Quest quest) {
         return questRepository.save(quest);
     }
 
-    @Transactional
     public DailyQuest saveDailyQuest(DailyQuest quest){
         return questRepository.save(quest);
+    }
+
+    public void changeQuestName(Long id, String newName){
+        questRepository.changeQuestName(id, newName);
     }
 
     @Transactional
@@ -34,7 +36,7 @@ public class QuestService {
         if (quest.isPresent()) {
             questRepository.deleteById(id);
         } else {
-            throw new RuntimeException("quest not found with ID: " + id);
+            throw new RuntimeException("quest not found with id: " + id);
         }
     }
 

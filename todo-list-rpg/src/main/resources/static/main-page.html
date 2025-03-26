@@ -17,7 +17,7 @@
                     <input type="text" id="questName" name="questName" required>
             
                     <label for="questDesc">Descrição:</label>
-                    <textarea id="questDesc" name="questDesc" rows="4" required></textarea>
+                    <textarea id="questDesc" name="questDesc" rows="2" required></textarea>
             
                     <label for="questDifficult">Dificuldade da Missão:</label>
                     <input type="number" id="questDifficult" name="questDifficult" min="1" max="4" required>
@@ -42,10 +42,22 @@
                 </form>
             </div>
 
-            <div class="quest-list">
+            <div class="quest-list-container">
                 <h2>Quest List</h2>
-                <div id="questList">
+                <div id="quest-list">
                     <!-- <div class="quest-item">
+                        <div class="quest-name">
+                            <p>ID: 1</p>
+                            <h3>Malhar</h3>
+                            <button class="change-name">Editar</button>
+                        </div>
+                        <p>Ficar forte</p>
+                        <p><strong>Nivel:</strong> 3</p>
+                        <p><strong>Tipo:</strong> STRENGTH</p>
+                        <p><strong>XP ganho:</strong> 300</p>
+                    </div> -->
+                    <!-- 
+                    <div class="quest-item">
                         <h3>Malhar</h3>
                         <p>Ficar forte</p>
                         <p><strong>Nivel:</strong> 3</p>
